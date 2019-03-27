@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="GMusic">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Music Collections</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- STYLESHEETS --><!--[if lt IE 9]><script src="js/flot/excanvas.min.js"></script><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" >
+  <link rel="stylesheet" type="text/css"  href="css/themes/default.css" id="skin-switcher" >
+  <link rel="stylesheet" type="text/css"  href="css/responsive.css" >
+  <!-- <link rel="stylesheet" type="text/css"  href="css/loader.css" > -->
+  <!-- <link rel="stylesheet" type="text/css"  href="css/dropdowns-enhancement.css" > -->
+  <!-- Animated Slider -->
+  
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- DATE RANGE PICKER -->
+  <!-- <link rel="stylesheet" type="text/css" href="js/bootstrap-daterangepicker/daterangepicker-bs3.css" /> -->
+  
+  <!-- AngularJS -->
+  <script src="angularjs/ngmodules/angular.min.js"></script>
+  <script type="text/javascript" src="angularjs/ngmodules/angular-route.js"></script> 
+  <!-- Firebase -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script> -->
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+  
+  <script>
+    var GMusic = angular.module('GMusic',['ngRoute', 'firebase']);
+    // configure our routes
+      GMusic.config(function($routeProvider) {
+        $routeProvider
+        
+        .when('/', {
+          templateUrl : 'angularjs/views/main.html',
+          controller : 'mainCtrl'
+          })
+        
+      });
+      
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script src="app.js">
+  // // Initialize Firebase
+  // var config = {
+  //   apiKey: "AIzaSyBWvW6xtGVZTcyn1sy6RO4B7pR9UI4GEXo",
+  //   authDomain: "firemusicdb.firebaseapp.com",
+  //   databaseURL: "https://firemusicdb.firebaseio.com",
+  //   projectId: "firemusicdb",
+  //   storageBucket: "firemusicdb.appspot.com",
+  //   messagingSenderId: "692083643613"
+  // };
+  // firebase.initializeApp(config);
+</script>
+</head>
+<body style="background-color:mintcream;">
+  
+  <!-- PAGE -->
+  <nav class="nav">
+    <div class="col-md-12">
+      <center>
+        <h1>My Music Lists</h1><br/>
+        <h5> Creating this Applications to list all the songs in my smartphone or just to used Firebase as database </h5>
+      </center>
+    </div>
+  </nav>
+  <section>
+        
+    <!-- Ng-Route-->
+    <div id="main-content">
+      <div ng-view></div>
+    </div>
+    <!-- /Ng-Route-->    
+    
+  </section>
+
+  <div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">About</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-center">Version: HiMirror_0.3.5.201703242030</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!--/PAGE -->
+  <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+  <script type="text/javascript" src="bootstrap/js/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="angularjs/controllers/mainCtrl.js"></script>
+</body>
+</html>

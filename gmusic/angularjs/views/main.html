@@ -1,0 +1,77 @@
+<div class="row" style="background-color:mintcream;"><br/></div>
+<div class="container">
+	<div class="col-md-12">
+		<br/>
+		<br/>
+		<div class="col-sm-4" >
+			<form class="formAdd">
+				<fieldset>
+					<legend>Add Songs You Listened To:</legend>
+					<div class="form-group">
+						<label class="col-sm-3 pull-left">*Title</label>
+						<input type="text" class="btn btn-default" ng-model="gmusic.song_title" />
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 pull-left">*Artist</label>
+						<input type="text" class="btn btn-default" ng-model="gmusic.song_artist" />
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 pull-left">*Size</label>
+						<input type="text" class="btn btn-default" ng-model="gmusic.song_size" />
+					</div>
+					<div>
+						<button class="btn btn-default col-sm-4 col-sm-offset-1" ng-click="clearForm(gmusic)" >Clear</button>
+						<button class="btn btn-primary col-sm-4 col-sm-offset-1" ng-click="add()" >Add Playlist</button>
+					</div>
+				</fieldset>
+			</form>
+			
+		</div>
+		<div class="col-sm-8 table-responsive">
+			<div id="search-bar">
+        <input class="form-control search" type="text" ng-model="q" id="search" placeholder="Search Song Title &#128269;" style="width:170px">
+      </div>
+      <br/>
+			<table>
+				<thead>
+					<th>#</th>
+					<th>Title</th>
+					<th>Artist</th>
+					<th>Size</th>
+					<th>Actions</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in playlists | filter:q">
+						<td>{{$index}}</td>
+						<td>{{item.song_title}}</td>
+						<td>{{item.song_artist}}</td>
+						<td>{{item.song_size}}</td>
+						<td class="col-sm-3">
+							<button class="btn btn-info" data-toggle="modal" data-target="#editModal"><i class="fa fa-pencil"></i></button>
+							<button class="btn btn-success" disabled="disabled"><i class="fa fa-play"></i></button>
+							<button class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal" id="editModal">
+	<div class="modal-dialog">
+		<div class="modal-header">
+			
+		</div>
+		<div class="modal-body">
+			<form>
+				<p></p>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary pull-right">Add</button>
+			<button class="btn btn-primary pull-left">Cancel</button>
+		</div>
+	</div>
+</div>

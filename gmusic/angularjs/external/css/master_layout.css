@@ -1,0 +1,815 @@
+/* ----------------------------------------------------------- Common Page Layout -----------------------------------------------------------*/
+
+
+/*修正IOS Mobile / Tab Madol cannot use  IOS將它視為圖片 請一律加上此class*/
+.clickable {
+    cursor: pointer;
+}
+
+
+
+/* Header 
+========================================================================= */
+.main{
+  margin-top:20px;
+}
+	
+/* header bg */
+.navbar-color{
+  background: #EFEFEF; 
+}
+
+/* header nav layout */
+.navbar-brand{
+  margin-top:2px;  
+  width: 115px;
+  height: 45px;
+  background: url(../image/img_main_logo_top.png);
+}
+
+.navbar-nav li > a{
+  font-size: 16px;
+   padding-right:10px; 
+   outline:none;
+}
+
+
+.navbar-nav  .icon{
+  margin-top:-10px; 
+  margin-bottom:-20px;  
+  display: inline-block;
+  width: 50px;
+  height: 45px;
+ /*border: 1px solid red;*/
+}
+
+.navbar ul li span.admin_name{
+  font-size: 14px;
+}
+
+.navbar ul li{
+  position: relative;
+}
+.navbar #notification_div{
+  display: none;
+  margin-top: 10px;
+  border: 1px solid red;
+  position: absolute;
+  top: 50px;
+  right: -138px;
+  z-index: 1060;
+  min-width: 350px;
+  padding: 1px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: left;
+  white-space: normal;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .2);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+/*notification triangle arrow*/
+.navbar #notification_div > .arrow,
+.navbar #notification_div > .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.navbar #notification_div > .arrow {
+  border-width: 11px;
+  top: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999;
+  border-bottom-color: rgba(0, 0, 0, .25);
+}
+
+.navbar #notification_div > .arrow:after {
+  content: "";
+  border-width: 10px;
+  top: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-width: 0;
+  border-bottom-color: #fff;
+}
+
+.navbar #notification_div div.notification_category{
+  text-align:right;
+  border-bottom:1px solid #cccccc;  
+}
+
+.navbar #notification_div div.notification_category a{
+  cursor: pointer;
+}
+
+.navbar #notification_div .notification_category .notification_all{
+  background:url(../image/nav_notification_toggle.png) 0px -30px;
+}
+
+.navbar #notification_div .notification_category .notification_all:hover{
+  background:url(../image/nav_notification_toggle.png) 0px 0px;
+}
+
+
+.navbar #notification_div .notification_category .notification_notice{
+  background:url(../image/nav_notification_toggle.png) -30px -30px;
+}
+
+.navbar #notification_div .notification_category .notification_notice:hover{
+  background:url(../image/nav_notification_toggle.png) -30px 0px;
+}
+
+.navbar #notification_div .notification_category .notification_warning{
+  background:url(../image/nav_notification_toggle.png) -60px -30px;
+}
+
+.navbar #notification_div .notification_category .notification_warning:hover{
+  background:url(../image/nav_notification_toggle.png) -60px 0px;
+}
+
+
+
+
+
+
+.navbar #notification_div a{
+  width: 30px;
+  height: 30px;
+  display: inline-block; 
+  background: gray;        
+}
+
+.navbar .update_number{
+  width: 20px;
+  height: 20px;
+  background: #ba3c5d;
+  border-radius: 10px;
+  position: absolute;
+  top:15px;
+  right:12px;
+  text-align: center;
+  cursor: pointer; 
+}
+
+.navbar .update_number span{
+  font-size: 8px;
+  color:#fff;
+}
+
+.navbar #notification_div ul.notification_list{
+  height: 270px;
+  text-decoration: none;
+  overflow:auto;
+  overflow-x: hidden;
+  padding-left:0px; 
+}
+
+.navbar #notification_div ul.notification_list li{
+  padding:3px;
+  list-style: none;
+  min-height: 30px;
+  cursor: pointer;
+ }
+
+ .navbar #notification_div ul.notification_list li:hover{
+  background:#e7e7e7; 
+ }
+
+ .navbar #notification_div ul.notification_list li p{
+   font-size: 14px;
+   line-height: 16px;
+   padding-left: 30px;
+ } 
+
+ .navbar #notification_div ul.notification_list li span{
+   display: block;
+   width: 30px;
+   height: 30px;
+   float: left; 
+   /*border: 1px solid red;*/
+ } 
+
+.navbar #notification_div .notification_list .icon_notice{
+  background:url(../image/nav_notification_toggle.png) -90px 0px;
+}
+
+.navbar #notification_div .notification_list .icon_warning{
+  background:url(../image/nav_notification_toggle.png) -120px 0px;
+}
+
+
+
+
+.navbar-nav .icon-account{
+  background: url(../image/nav_main_account.png) no-repeat;
+}
+
+.navbar-nav .icon-notification{
+  background: url(../image/nav_main_notification.png) no-repeat;
+}
+
+.navbar-nav .icon-language{
+  background: url(../image/nav_main_language.png) no-repeat;
+}
+
+.navbar-nav .icon-more{
+  background: url(../image/nav_main_more.png) no-repeat;
+}
+
+.navbar-nav .icon-taskmanager{
+  background: url(../image/nav_task_manager.png) no-repeat;
+}
+
+.navbar-nav .index_top_toggle li a span{
+  margin-top:-5px;   
+  margin-left:-15px; 
+  width: 30px;
+  height: 30px;
+  margin-right:10px; 
+  float: left;
+  /*border: 1px solid red;*/
+}
+
+.navbar-nav .index_top_toggle li a .icon_profile{
+  background: url(../image/nav_main_account_toggle.png) 0px 0px;
+}
+
+.navbar-nav .index_top_toggle li a .icon_restart{
+  background: url(../image/nav_main_account_toggle.png) -30px 0px;
+}
+
+.navbar-nav .index_top_toggle li a .icon_shutdown{
+  background: url(../image/nav_main_account_toggle.png) -60px 0px;
+}
+
+.navbar-nav .index_top_toggle li a .icon_logout{
+  background: url(../image/nav_main_account_toggle.png) -90px 0px;
+}
+
+/* =============== Overlay Bootstrap Default Setting ================= */
+
+/* 最上方Sing in / Sing out大螢幕a的顏色*/
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #9b9b9b;
+  white-space: nowrap;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #4f4f4f;
+  text-decoration: none;
+  background-color: #efefef;
+}
+
+
+
+.index_top_toggle{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 120px;
+  padding: 5px 0 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 0px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+/*.popover{
+  border-radius:0px; 
+}*/
+
+/* Triangle Toggle UI */
+/*
+.index_top_toggle:after{
+  position: absolute;
+  top: -8px;
+  left: 25px;
+  content: "";
+  display: block;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid white;
+}
+*/
+
+/*麵包屑設定*/
+ol.breadcrumb {
+  display: inline-block;
+  width: calc(100% - 120px);
+  padding: 0px;
+  margin-bottom: 20px;
+  list-style: none;
+  background:none;
+      overflow: hidden;
+  text-overflow : ellipsis;
+  white-space: nowrap;
+}
+.breadcrumb > li {
+  display: inline-block;
+  font-size: 24px;
+
+}
+.breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: ">\00a0";
+}
+.breadcrumb > .active {
+  color: #777;
+}
+
+.breadcrumb > li > a{
+  color: #4f4f4f;
+
+}
+
+
+
+ /*==================================  Go to top button  ==================================*/ 
+.go_to_top{
+  cursor: pointer;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  margin: 20px 20px;
+  position:fixed;
+  right: 0px;
+  bottom: 0px;
+  background:url(../image/go_to_top.png);
+}
+
+
+/* Footer CSS (Sticky footer styles) 
+======================================================================= */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 50px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  min-height: 50px;
+  background-color: #EFEFEF;
+}
+
+.footer div{
+  color: #9b9b9b;
+  font-size: 16px;
+  padding-top: 5px;
+}
+
+
+
+
+/* -----------------------------------------------------------Theme Content Area Layout -----------------------------------------------------------*/
+
+/* Index Page Layout 
+================================================================================================== */
+
+/* top sloganBar */
+.sloganBar{
+  margin-top:50px; 
+  width: 100%;
+  height: 50px;
+  background: #C4C4C4;
+}
+
+.sloganBar div div{
+  color: #ffffff;
+  font-size:24px;
+  line-height: 50px;
+  font-style:italic; 	
+}
+
+
+/* Main function box size */
+.content-box{
+  margin:15px 0;
+  width: 100%;
+  height: 240px;
+  background: #eeeeee;
+  text-align: center;
+  cursor: pointer;
+  transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  -webkit-transition: background 1s ease;
+  -ms-transition: background 1s ease;
+  -o-webkit-transition: background 1s ease;
+}
+
+/* Main function box bg-color*8 */
+.bg01{background: #e9a875;}
+
+.bg02{background: #f0c76c;}
+
+.bg03{background: #77cecd;}
+
+.bg04{background: #789dcd;}
+
+.bg05{background: #ce6f89;}
+
+.bg06{background: #e18576;}
+
+.bg07{background: #a979a4;}
+
+.bg08{background: #62a1b2;}
+
+/* Main function box bg-color*8 (hover) */
+
+.bg01:hover{background: #e6781e;}
+
+.bg02:hover{background: #f0a50a;}
+
+.bg03:hover{background: #31a7ab;}
+
+.bg04:hover{background: #1d6db4;}
+
+.bg05:hover{background: #bd2446;}
+
+.bg06:hover{background: #db4225;}
+
+.bg07:hover{background: #6c2859;}
+
+.bg08:hover{background: #0e6e89;}
+
+
+/* Main function box img animation */
+.main .content-box img{
+  width: 100px;
+  height: 100px;
+  margin-top:50px;
+  margin-bottom:30px;
+  /*border: 1px solid red;*/
+  -webkit-transition:All 0.3s ease-in-out;
+  -moz-transition:All 0.3s ease-in-out;
+  -o-transition:All 0.3s ease-in-out;
+  transition:All 0.3s ease-in-out;
+}
+ 
+.main .content-box .btn_text{
+  display: block;
+  font-size: 24px;
+  color: #ffffff;
+  letter-spacing:2px;
+  text-decoration:none;
+}
+
+
+.main .content-box:hover img{
+  -webkit-transform:rotate(15deg) scale(1.2);
+  -moz-transform:rotate(15deg) scale(1.2);
+  -o-transform:rotate(15deg) scale(1.2);
+  -ms-transform:rotate(15deg) scale(1.2);
+  transform:rotate(15deg) scale(1.2);
+}
+ 
+
+/* Setup_wizard Page Layout 
+================================================================================================== */
+
+.nav-setup{
+  background: #efefef;
+}
+
+.navbar-nav .icon-help{
+  background: url(../image/nav_setup_help.png) no-repeat;
+}
+
+.helloArea{
+  background:#f7f7f7;
+  position: relative;
+}
+
+.helloArea div div{
+  position: relative;
+  /*border:1px solid red;*/
+  margin-top:100px; 
+  margin-bottom: 40px; 
+}
+
+.helloArea div div .hello_text{
+  width: 100px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  left:20px;
+  /*border:1px solid blue;*/
+  font-size: 28px;
+  color:#db4225;
+  font-style: italic;
+  text-align: center; 
+}
+
+.helloArea div div img{  
+  /*border:1px solid red;*/
+}
+
+.setup3steps h3{
+  font-size: 26px;
+  padding-top: 15px;
+  padding-bottom: 8px;
+  color: #9b9b9b;
+}
+
+.setup3steps .btn-border{
+  border:1px solid #c4c4c4;
+  min-height: 70px;
+}
+
+.setup3steps .btn-border-gray{
+  border:1px solid #C4C4C4;
+  min-height: 70px;
+}
+
+.setup3steps .number_block{
+  margin:10px 10px 10px -5px; 
+  width: 50px;
+  height:50px;
+  line-height: 50px;
+  background: #efefef;
+  display: block;
+  float: left;
+  font-size:36px;
+  text-align: center;
+  color:#9b9b9b;
+}
+
+.setup3steps .item_title{
+  display: block;
+  margin-top:6px; 
+  color: #747474;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.setup3steps .item_content{
+  display: block; 
+  color: #9b9b9b;
+  font-size: 18px;
+}
+
+.setup3steps .item_title_h{
+  display: block;
+  margin-top:6px; 
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.setup3steps .item_content_h{
+  display: block; 
+  color: #ffffff;
+  font-size: 18px;
+}
+
+/*-------setup_wizard.html contents-------*/
+
+.setup3steps h2{
+  color: #4f4f4f;
+}
+
+.setup3steps .btn-bg01{
+  background: #e6781e;
+} 
+
+.setup3steps .btn-bg02{
+  background: #f0a50a;
+} 
+
+.setup3steps .btn-bg03{
+  background: #0e6e89;
+} 
+
+.setup3steps .number_color1{
+  color: #e6781e;
+}
+
+.setup3steps .number_color2{
+  color: #f0a50a;
+}
+
+.setup3steps .number_color3{
+  color: #0e6e89;
+}
+
+.setup3steps .topic_p{
+  font-size: 22px;
+  color: #9b9b9b;
+  }
+
+.setup3steps .input_area{
+  height: 351px;
+  /*border: 1px solid red;*/
+}
+
+.setup3steps .input_area .paddingRegiest{
+  display: block;
+  height: 100px;
+  /*border: 1px solid red;*/
+}
+
+.setup3steps .input_area .input_title{
+ padding:5px;  
+ font-size: 28px; 
+ color:#0e6e89;
+}
+
+.setup3steps .input_area .input_title label{
+ font-weight: normal;
+}
+
+.setup3steps .input_area #recommend_note{
+ margin-left: 45px;
+}
+
+.setup3steps .float-right{
+  float: right;
+}
+
+
+
+/*Summary Page*/
+
+.setup3steps .summary_line{
+  height: 8px;
+}
+
+
+.setup3steps .summary_area{
+  height: 416px;
+  /*border: 1px solid red;*/
+}
+
+.setup3steps .summary_area .item_title{
+  margin-top:6px; 
+  color: #747474;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.setup3steps .summary_area .item_content{
+  font-size: 26px;
+  color: #0e6e89;
+  padding-left:90px;
+  word-wrap:break-word;
+}
+
+
+/*Scrollbar UI*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+    border-left: 1px solid #ccc;
+}
+::-webkit-scrollbar-thumb {
+  border: 1px solid #eaeaea;
+    background-color: #ccc;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 手機最上面sing in/ sing out大螢幕a的顏色 */
+@media (max-width: 767px){
+
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+      padding-left: 65px;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>li>a:active {
+      background: #fff;
+    }
+}
+
+
+
+
+@media(min-width:768px) {
+    /*非手機隱藏大選單的文字 只剩ICON*/
+    .navbar ul li span.navbar_text {
+        display:none;
+    }
+
+}    
+
+/*修正手機450以下*/
+@media(max-width:450px) {
+
+     /*修改手機450以下的GAP*/
+    .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5,
+    .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12,
+    .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1,
+    .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
+    .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3,
+    .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+     padding-right:10px;
+     padding-left: 10px;       
+    }
+
+
+    /*Setup Wizared 手機修正*/
+    .setup3steps .input_area .paddingRegiest{
+    height: 0px;
+    }
+
+    #frmRegister .input_area{
+      height: 150px;
+    }
+
+    #frmStorage .input_area{
+      height: 280px;
+    }
+
+    #frmSummary .setup3steps .summary_area .item_content{
+    font-size: 18px;
+    padding-left:10px; 
+    }
+
+
+
+    /*home修正*/
+    .content-box{
+    margin:10px 0;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 1s ease;
+    -moz-transition: background 1s ease;
+    -webkit-transition: background 1s ease;
+    -ms-transition: background 1s ease;
+    -o-webkit-transition: background 1s ease;
+    }
+
+    .main .content-box img{
+    width: 70px;
+    height: 70px;
+    margin-top:25px;
+    margin-bottom:15px;
+    /*border: 1px solid red;*/
+    -webkit-transition:All 0.3s ease-in-out;
+    -moz-transition:All 0.3s ease-in-out;
+    -o-transition:All 0.3s ease-in-out;
+    transition:All 0.3s ease-in-out;
+    }
+
+    .main .content-box .btn_text {
+    font-size: 14px;
+    }
+
+
+}

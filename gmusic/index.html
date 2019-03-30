@@ -23,7 +23,7 @@
   <script src="angularjs/ngmodules/angular.min.js"></script>
   <script type="text/javascript" src="angularjs/ngmodules/angular-route.js"></script> 
   <!-- Firebase -->
-  <!-- <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
   <!-- AngularFire -->
   <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
   
@@ -44,25 +44,25 @@
   <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 <script src="app.js">
   // // Initialize Firebase
-  // var config = {
-  //   apiKey: "AIzaSyBWvW6xtGVZTcyn1sy6RO4B7pR9UI4GEXo",
-  //   authDomain: "firemusicdb.firebaseapp.com",
-  //   databaseURL: "https://firemusicdb.firebaseio.com",
-  //   projectId: "firemusicdb",
-  //   storageBucket: "firemusicdb.appspot.com",
-  //   messagingSenderId: "692083643613"
-  // };
-  // firebase.initializeApp(config);
+  var config = {
+    apiKey: "AIzaSyBWvW6xtGVZTcyn1sy6RO4B7pR9UI4GEXo",
+    authDomain: "firemusicdb.firebaseapp.com",
+    databaseURL: "https://firemusicdb.firebaseio.com",
+    projectId: "firemusicdb",
+    storageBucket: "firemusicdb.appspot.com",
+    messagingSenderId: "692083643613"
+  };
+  firebase.initializeApp(config);
 </script>
 </head>
 <body style="background-color:mintcream;">
   
   <!-- PAGE -->
-  <nav class="nav">
+  <nav class="nav" style="background-color:lightblue;">
     <div class="col-md-12">
       <center>
-        <h1>My Music Lists</h1><br/>
-        <h5> Creating this Applications to list all the songs in my smartphone or just to used Firebase as database </h5>
+        <h2>Music Collections</h2><br/>
+        <h5> Creating this Applications to list all the songs in my smartphone or just to used Firebase as database <a class="badge" data-toggle="modal" data-target="#versionModal" style="text-decoration:none;border-radius:50%;"><i class="fa fa-info"></i></a></h5> 
       </center>
     </div>
   </nav>
@@ -76,7 +76,7 @@
     
   </section>
 
-  <div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal fade" id="versionModal" tabindex="-1" role="dialog" aria-labelledby="versionModal" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
       <div class="modal-header">
@@ -84,7 +84,7 @@
         <h4 class="modal-title">About</h4>
       </div>
       <div class="modal-body">
-        <p class="text-center">Version: HiMirror_0.3.5.201703242030</p>
+        <p class="text-center">Version: v.0.2</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
@@ -93,8 +93,8 @@
     </div>
   </div>
   <!--/PAGE -->
-  <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
   <script type="text/javascript" src="bootstrap/js/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
   <script type="text/javascript" src="angularjs/controllers/mainCtrl.js"></script>
 </body>
 </html>

@@ -20,8 +20,9 @@
 						<input type="text" class="btn btn-default" ng-model="gmusic.song_size" />
 					</div>
 					<div>
+						<!-- <input type="text" name="" class="btn btn-default" ng-model="song.title"> {{song.title}} -->
 						<button class="btn btn-default col-sm-4 col-sm-offset-1" ng-click="clearForm(gmusic)" >Clear</button>
-						<button class="btn btn-primary col-sm-4 col-sm-offset-1" ng-click="add()" >Add Playlist</button>
+						<button class="btn btn-primary col-sm-4 col-sm-offset-1" ng-click="add()" >Add PlayLists</button>
 					</div>
 				</fieldset>
 			</form>
@@ -42,14 +43,14 @@
 				</thead>
 				<tbody>
 					<tr ng-repeat="item in playlists | filter:q">
-						<td>{{$index}}</td>
+						<td>{{$index+1}}</td>
 						<td>{{item.song_title}}</td>
 						<td>{{item.song_artist}}</td>
 						<td>{{item.song_size}}</td>
 						<td class="col-sm-3">
-							<button class="btn btn-info" data-toggle="modal" data-target="#editModal"><i class="fa fa-pencil"></i></button>
+							<button class="btn btn-info" data-toggle="modal" data-target="#editModal" ng-click="edit(item.$id)"><i class="fa fa-pencil"></i></button>
 							<button class="btn btn-success" disabled="disabled"><i class="fa fa-play"></i></button>
-							<button class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+							<button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal" ng-click="deleteData(item)"><i class="fa fa-trash-o"></i></button>
 						</td>
 					</tr>
 				</tbody>
@@ -59,19 +60,79 @@
 </div>
 
 
-<div class="modal" id="editModal">
-	<div class="modal-dialog">
-		<div class="modal-header">
-			
+<div class="modal modal-danger fade" id="editModal">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Edit Song</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<p>
+						<div class="row">
+							<div class="col-md-12">
+								<center>
+									<form class="formAdd">
+										<fieldset>
+											<div class="form-group">
+												<label class="col-sm-3 pull-left">*Title</label>
+												<input type="text" class="btn btn-default" ng-model="editdata.song_title" />
+											</div>
+											<div class="form-group">
+												<label class="col-sm-3 pull-left">*Artist</label>
+												<input type="text" class="btn btn-default" ng-model="editdata.song_artist" />
+											</div>
+											<div class="form-group">
+												<label class="col-sm-3 pull-left">*Size</label>
+												<input type="text" class="btn btn-default" ng-model="editdata.song_size" />
+											</div>
+										</fieldset>
+									</form>
+								</center>
+							</div>
+						</div>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal" ng-click="save(editdata.$id,editdata.song_title,editdata.song_artist,editdata.song_size)">Save</button>
+					<button class="btn btn-default" data-dismiss="modal">Cancel</button>
+			</div>
 		</div>
-		<div class="modal-body">
-			<form>
-				<p></p>
-			</form>
-		</div>
-		<div class="modal-footer">
-			<button class="btn btn-primary pull-right">Add</button>
-			<button class="btn btn-primary pull-left">Cancel</button>
+	</div>
+</div>
+
+<div class="modal modal-danger fade" id="deleteModal">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Delete Song</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<p>
+						<div class="row">
+							<div class="col-md-12">
+								<center>
+									<p>Do you want to delete this song titled "{{deleteItem.song_title}}" ? </p>
+								</center>
+							</div>
+						</div>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal" ng-click="delete(deleteItem)">Delete</button>
+					<button class="btn btn-default" data-dismiss="modal">Cancel</button>
+			</div>
 		</div>
 	</div>
 </div>
